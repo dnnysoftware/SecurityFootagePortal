@@ -14,12 +14,10 @@
                         <div class="d-flex justify-content-between">
                             <p>Name: {{vid.ns}}</p>
                             <p>Created: {{vid.date}}</p>
-        
                             <a class="btn btn-outline-dark" href='/footage/{{vid.id}}'>Inspect Clip</a>
                             <a class="btn btn-outline-dark" href='/footage/delete/{{vid.id}}'>Delete</a>
-
                         </div>
-                        <video width="640" height="340" class='mt-3 mb-3' controls>
+                        <video width="600" height="338" class='border border-dark rounded mt-3 mb-3' controls>
                             <source src={{vid.urlpath}} type="video/mp4"/></source> 
                         </video>
                     </div>

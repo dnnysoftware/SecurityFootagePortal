@@ -4,6 +4,7 @@
         "boto",
         "hflip",
         "moviepy",
+        "urlpath",
         "videofile"
     ]
 }
