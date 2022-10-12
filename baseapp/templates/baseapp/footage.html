@@ -5,7 +5,12 @@
     <h1 class="d-flex justify-content-center">Footage Viewer</h1>
     <div class="d-flex justify-content-center">
         <div>
-            <h3>Video: {{video.ns}}</h3>
+            <div class="d-flex justify-content-between">
+                <h4>Name: {{video.ns}}</h4>
+                <h4>Created: {{video.date}}</h4>
+                <a href={{video.next}}>Next</a>
+                <a href={{video.prev}}>Previous</a>
+            </div>
             <video width="1280" height="720" controls>
                 <source src={{video.urlpath}} type="video/mp4"/></source> 
             </video>

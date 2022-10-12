@@ -3,14 +3,21 @@
 {% block content %}
 {% load static %} 
 <div>
-    <h1>Home Template</h1>
     <div>
+        <div class="d-flex justify-content-center">
+            <h1>Security Camera Footage</h1>
+        </div>
         <div>
             {% for vid in videos %}
                 <div class="d-flex justify-content-center">
                     <div>
-                        <h5>{{vid.id}} -- <a href='/footage/{{vid.id}}'>{{vid.ns}}</a></h5>
-                        <video width="640" height="480" controls>
+                        <div class="d-flex justify-content-between">
+                            <p>Name: {{vid.ns}}</p>
+                            <p>Created: {{vid.date}}</p>
+                            <a href='/footage/{{vid.id}}'>Inspect Clip</a>
+                            <a href='/footage/delete/{{vid.id}}'>Delete</a>
+                        </div>
+                        <video width="640" height="340" controls>
                             <source src={{vid.urlpath}} type="video/mp4"/></source> 
                         </video>
                     </div>

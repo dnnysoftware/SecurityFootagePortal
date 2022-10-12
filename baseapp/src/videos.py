@@ -37,13 +37,14 @@ def get_videos_formatted():
                 fp.__setattr__('ns', file)
                 fp.__setattr__('id', count)
                 fp.__setattr__('urlpath', 'https://d37gl3wwe8ps5w.cloudfront.net/' + urllib.parse.quote(file))
-                vid_arr.append(fp)
+                fp.__setattr__('date', file.split(' ')[0])
+                vid_arr.insert(0, fp)
                 count+=1
             os.remove(filepath)
     return vid_arr
     
-
-
+def delete_video(id, key):
+    print()
 
 def main():
     get_videos_formatted()
