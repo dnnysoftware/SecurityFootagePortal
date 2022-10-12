@@ -9,3 +9,28 @@
 body {
     font-family: questrial;
 }
+
+body {
+  background: linear-gradient(149deg, #43b0c8, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 48%}
+  50%{background-position:100% 53%}
+  100%{background-position:0% 48%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 48%}
+  50%{background-position:100% 53%}
+  100%{background-position:0% 48%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 48%}
+  50%{background-position:100% 53%}
+  100%{background-position:0% 48%}
+}
