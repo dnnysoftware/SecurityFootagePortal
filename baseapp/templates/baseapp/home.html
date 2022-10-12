@@ -2,21 +2,21 @@
 
 {% block content %}
 {% load static %} 
-
-<h1>Home Template</h1>
-
 <div>
+    <h1>Home Template</h1>
     <div>
-        {% for vid in videos %}
-            <div>
-                <h5>{{vid.id}} -- <a href='/footage/{{vid.id}}'>{{vid.ns}}</a></h5>
-                <video width="320" height="240" controls>
-                    <p>{{vid.urlpath}}</p>
-                    <source src={{vid.urlpath}} type="video/mp4"/></source> 
-                </video>
-            </div>
-        {% endfor %}
+        <div>
+            {% for vid in videos %}
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <h5>{{vid.id}} -- <a href='/footage/{{vid.id}}'>{{vid.ns}}</a></h5>
+                        <video width="640" height="480" controls>
+                            <source src={{vid.urlpath}} type="video/mp4"/></source> 
+                        </video>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
-
 {% endblock content%}

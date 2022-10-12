@@ -3,6 +3,7 @@
 ## Virtual Environment Commands
 - `source env/bin/activate`
 - `deactivate`
+- `sudo lsof -t -i tcp:8000 | xargs kill -9`
 
 ## Django Commands 
 - `django-admin` : List out django commands

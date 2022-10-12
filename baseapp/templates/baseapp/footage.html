@@ -1,8 +1,16 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<h1>Footage Template</h1>
-<h3>{{video.name}}</h3>
+<div>
+    <h1 class="d-flex justify-content-center">Footage Viewer</h1>
+    <div class="d-flex justify-content-center">
+        <div>
+            <h3>Video: {{video.ns}}</h3>
+            <video width="1280" height="720" controls>
+                <source src={{video.urlpath}} type="video/mp4"/></source> 
+            </video>
+        </div>
+    </div>
+</div>
 
 {% endblock content%}
