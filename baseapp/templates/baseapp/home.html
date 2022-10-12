@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% load static %} 
+
+<h1>Home Template</h1>
+
+<div>
+    <div>
+        {% for vid in videos %}
+            <div>
+                <h5>{{vid.id}} -- <a href='/footage/{{vid.id}}'>{{vid.ns}}</a></h5>
+                <video width="320" height="240" controls>
+                    <p>{{vid.urlpath}}</p>
+                    <source src={{vid.urlpath}} type="video/mp4"/></source> 
+                </video>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content%}
